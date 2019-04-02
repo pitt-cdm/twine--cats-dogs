@@ -5,7 +5,7 @@ Guiding questions are in comments; add your answers outside the comments, where 
 
 <!-- Who is working on this project? -->
 
-
+Aliyah and Aba
 
 
 
@@ -14,9 +14,7 @@ Guiding questions are in comments; add your answers outside the comments, where 
 
 <!-- What's the basic pitch for the Twine narrative? Where do you start? Who do you play as? What's the genre? -->
 
-
-
-
+The game will being with options between being a cat or a dog. It'll then have the options for being a wild or domestic cat/dog and the life will play out from there. 
 
 
 
@@ -26,7 +24,7 @@ Now add some specificity to that general plan: who will take what role, at what 
 
 IMPORTANT: never include personal info like phone numbers on GitHub! -->
 
-
+Contact through text, Aliyah will work on the basic template and the domestic side of the animals. Aba will work on the wild side of the animals 
 
 
 
