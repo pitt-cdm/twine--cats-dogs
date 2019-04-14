@@ -20,7 +20,13 @@
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
 
 
 
@@ -82,20 +88,22 @@ Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
 [[Find some water]]
 </tw-passagedata><tw-passagedata pid="15" name="Lone Wolf" tags="" position="1050,119" size="100,100">You have decided to become a loner. This is a challenging path, but you&#39;ve been burned too many times. You can&#39;t trust anyone. However, without the support of the pack your food options are limited. What will you do?
 [[Steal a carcaas from a grizzly bear]]
-[[Wait for the bear to leave, then eat the scraps]]</tw-passagedata><tw-passagedata pid="16" name="Pack" tags="" position="770,463" size="100,100">You enjoy team work and family life. When living as part of a pack, you develop bonds with your fellows wolves. THese bonds are essential for survival and come into play when hunting and raising pups. As a new member, you must join the hunting party and secure the pack&#39;s next meal. What will you bring back?
+[[Wait for the bear to leave, then eat the scraps]]</tw-passagedata><tw-passagedata pid="16" name="Pack" tags="" position="838,443" size="100,100">You enjoy team work and family life. When living as part of a pack, you develop bonds with your fellows wolves. THese bonds are essential for survival and come into play when hunting and raising pups. As a new member, you must join the hunting party and secure the pack&#39;s next meal. What will you bring back?
 [[Caribou]]
-[[Small Rabbit]]</tw-passagedata><tw-passagedata pid="17" name="Continue Watching" tags="" position="1688,509" size="100,100">(set: $watch is true) [
+[[Small Rabbit]]</tw-passagedata><tw-passagedata pid="17" name="Continue Watching" tags="" position="1688,509" size="100,100">(set: $watch to true) 
 
-*Yawn* This is boring 
-[[Take a nap on the windowsill]]]
 (if: $cookies is true)[You heard the can open... RUN TO THE KITCHEN
 [[Dinner Time]]]
 (if: $revenge is true)[You heard the can open... RUN TO THE KITCHEN
-[[Dinner Time]]]</tw-passagedata><tw-passagedata pid="18" name="Play with the pillows" tags="" position="0,179" size="100,100">(set: $feathers to true)
+[[Dinner Time]]]
+(else:)[
+
+*Yawn* This is boring 
+[[Take a nap on the windowsill]]]</tw-passagedata><tw-passagedata pid="18" name="Play with the pillows" tags="" position="0,179" size="100,100">(set: $feathers to true)[
 
 You had your fun, there are feathers everywhere. Definitley time for a nap! Or do you want some water first?
 [[Find some water]]
-[[Take a nap on the bed]]</tw-passagedata><tw-passagedata pid="19" name="Find the tv Remote" tags="" position="496,309" size="100,100">(set: $remote is true) [You found the tv remote alright.. It was a ton of fun to chew but you hid the evidence under your belly anyway. You are exhausted now! ]
+[[Take a nap on the bed]]]</tw-passagedata><tw-passagedata pid="19" name="Find the tv Remote" tags="" position="496,309" size="100,100">(set: $remote to true) [You found the tv remote alright.. It was a ton of fun to chew but you hid the evidence under your belly anyway. You are exhausted now! ]
 [[Take a nap on the couch]]</tw-passagedata><tw-passagedata pid="20" name="Lay in the sun" tags="" position="713,286" size="100,100">(if: $sun to true)[That was a really nice nap, but it got really warm.
 ]
 
@@ -122,7 +130,7 @@ You had your fun, there are feathers everywhere. Definitley time for a nap! Or d
 ]
 (else:)[You slept so hard you fell off the windowsill but no worries you landed on all fours. Where do you go next?]
 [[On the Couch]]
-[[Kitchen]]</tw-passagedata><tw-passagedata pid="28" name="Continue napping on the couch" tags="" position="774,634" size="100,100">(if: $remote is true)[Mom and dad come in the room and dad tries to turn on the tv and looks for the remote. He sees what happened and wakes you up immediately. You get put in the crate right away :( 
+[[Kitchen]]</tw-passagedata><tw-passagedata pid="28" name="Continue napping on the couch" tags="" position="698,626" size="100,100">(if: $remote is true)[Mom and dad come in the room and dad tries to turn on the tv and looks for the remote. He sees what happened and wakes you up immediately. You get put in the crate right away :( 
 [[Crate]] ]
 (else:)[Mom and dad come in and say hi. You love them so much! You follow them to the bedroom.
 [[Bedroom]] ]</tw-passagedata><tw-passagedata pid="29" name="Run to say hello" tags="" position="213,363" size="100,100">Mom and dad are so excited to see you! You welcome them with kisses! Do you walk with them the to bedroom or lead them to the living room couch?
@@ -137,17 +145,18 @@ Ahhhh, soft feathers. So hard to get up!
 Good thing this pillow is still here.
 [[Mom and Dad come in the room]]
 ]
-</tw-passagedata><tw-passagedata pid="32" name="Mom and Dad come in the room" tags="" position="56,448" size="100,100">(set: $momanddadcomehome is true)[(if: $feathers is true)[Mom and dad see what you did right away and they are angry.. you get put in the crate right away.. :(
+</tw-passagedata><tw-passagedata pid="32" name="Mom and Dad come in the room" tags="" position="56,448" size="100,100">(set: $momanddadcomehome to true)
+(if: $feathers is true)[Mom and dad see what you did right away and they are angry.. you get put in the crate right away.. :(
 [[Crate]] ]
 (else:)[You wait with mom and dad until they go to the living room.
-[[Living Room]] ]]</tw-passagedata><tw-passagedata pid="33" name="Steal a carcaas from a grizzly bear" tags="" position="1190,317" size="100,100">Even a pack of wolves will steer clear of a grizzly bear. As a lone wolf you didn&#39;t stand a chance!
+[[Living Room]] ]</tw-passagedata><tw-passagedata pid="33" name="Steal a carcaas from a grizzly bear" tags="" position="1190,317" size="100,100">Even a pack of wolves will steer clear of a grizzly bear. As a lone wolf you didn&#39;t stand a chance!
 [[GAME OVER]] </tw-passagedata><tw-passagedata pid="34" name="Wait for the bear to leave, then eat the scraps" tags="" position="1368,264" size="100,100">Smart move! Grizzly bears are much bigger and stronger than wolves. After your meal you decide to move on and explore the area. You like the area, and as long as you avoid the bears you should be fine.
 [[Start to mark your territory]]</tw-passagedata><tw-passagedata pid="35" name="Start to mark your territory" tags="" position="1431,412" size="100,100">Oh no! You&#39;ve wandered into a local pack&#39;s territory and they&#39;ve picked up your scent. 
 [[Stand your ground and defend your new territory.]]
 [[Run Away!]]
 You might get away...maybe. </tw-passagedata><tw-passagedata pid="36" name="Caribou" tags="" position="1029,348" size="100,100">Your initiation was successful, and you have succeeded in providing your new pack with a substantial meal.
 [[Allow the alpha male to eat first.]]
-[[Eat first, since you made the kill.]]</tw-passagedata><tw-passagedata pid="37" name="Small Rabbit" tags="" position="885,313" size="100,100">This was not enough to feed the whole pack! The alpha male is offended, becomes aggressive, and ultimately decides you are not worthy of remaining in the pack.
+[[Eat first, since you made the kill.]]</tw-passagedata><tw-passagedata pid="37" name="Small Rabbit" tags="" position="925,257" size="100,100">This was not enough to feed the whole pack! The alpha male is offended, becomes aggressive, and ultimately decides you are not worthy of remaining in the pack.
 
 [[Lone Wolf]] </tw-passagedata><tw-passagedata pid="38" name="Allow the alpha male to eat first." tags="" position="902,598" size="100,100">This is a sign of respect, and the alpha takes notice. 
 [[The alpha increases your rank within the pack.]]
@@ -172,8 +181,8 @@ You don&#39;t know when you will feel this strong and confident again.</tw-passa
 [[Play with a toy]]]</tw-passagedata><tw-passagedata pid="49" name="Ignore" tags="" position="2180,783" size="100,100">Ignoring the human is the best option, they are annoying anyway. Should you take a nap or sit in front of the tv?
 [[Nap]]
 [[Sit in front of TV]]
-</tw-passagedata><tw-passagedata pid="50" name="Nap" tags="" position="2148,912" size="100,100">(set: $nap is true)[Naps are always the best.. ]
-[[Engage]]</tw-passagedata><tw-passagedata pid="51" name="Play with a toy" tags="" position="1862,1112" size="100,100">(set: $toy is true)[Dad has the feather toy, get your claws out to play!]
+</tw-passagedata><tw-passagedata pid="50" name="Nap" tags="" position="2148,912" size="100,100">(set: $nap to true)[Naps are always the best.. ]
+[[Engage]]</tw-passagedata><tw-passagedata pid="51" name="Play with a toy" tags="" position="1862,1112" size="100,100">(set: $toy to true)[Dad has the feather toy, get your claws out to play!]
 [[Get the claws ready]]</tw-passagedata><tw-passagedata pid="52" name="Sit in front of TV" tags="" position="2160,551" size="100,100">Dad does not like this choice.. He has gotten up and is coming towards you. Should you run to the kitchen or get your claws ready?
 [[Kitchen]]
 [[Get the claws ready]]</tw-passagedata><tw-passagedata pid="53" name="Get the claws ready" tags="" position="2357,995" size="100,100">(If: $toy is true)[You have a lot of fun with dad chasing around the feather but it gets boring. You move on. Do you go to the kitchen or the windowsill?
@@ -181,9 +190,9 @@ You don&#39;t know when you will feel this strong and confident again.</tw-passa
 [[Window sill]]]
 (else:)[Dad is not happy with you whatso ever. You have scratched him and he is chasing you. Do you go to the windowsill or the Kitchen?
 [[Window sill]]
-[[Kitchen]]]</tw-passagedata><tw-passagedata pid="54" name="Stay on the floor" tags="" position="2900,451" size="100,100">(Set: $cookies is true)[A little while later mom drops an entire tray of cookies while stepping on my tail.. No one is happy in this situation, should you take revenge or just go to the window sill?
+[[Kitchen]]]</tw-passagedata><tw-passagedata pid="54" name="Stay on the floor" tags="" position="2900,451" size="100,100">(Set: $cookies to true)[A little while later mom drops an entire tray of cookies while stepping on my tail.. No one is happy in this situation, should you take revenge or just go to the window sill?
 [[Take Revenge]]
-[[Window sill]] </tw-passagedata><tw-passagedata pid="55" name="Take Revenge" tags="" position="2693,573" size="100,100">(set: $revenge is true)[You attack moms ankles! She looks furious... go to the window sill!
+[[Window sill]] </tw-passagedata><tw-passagedata pid="55" name="Take Revenge" tags="" position="2693,573" size="100,100">(set: $revenge to true)[You attack moms ankles! She looks furious... go to the window sill!
 [[Window sill]] 
 ]</tw-passagedata><tw-passagedata pid="56" name="Dinner Time" tags="" position="1625,774" size="100,100">You are so excited for this dinner dad is getting for you! Here it comes!
 (if: $revenge is true)[Wait - mom stopped dad, dead in his tracks. She told him what you did in the kitchen to her ankle... and she said NO DINNER! UGH Life is so hard..
@@ -191,11 +200,12 @@ You don&#39;t know when you will feel this strong and confident again.</tw-passa
 (else:)[Yes here it is! 
 [[Eat dinner]]]</tw-passagedata><tw-passagedata pid="57" name="Stretch" tags="" position="1835,674" size="100,100">Wow that was nice.
 [[Dinner Time]] </tw-passagedata><tw-passagedata pid="58" name="Time to Pout" tags="" position="1725,645" size="100,100">Wow mom said no dinner since you scratched her earlier today... I guess you will have to go to bed without dinner.. :(
-Goodnight :(</tw-passagedata><tw-passagedata pid="59" name="Stand your ground and defend your new territory." tags="" position="1317,558" size="100,100">It&#39;s just you against 5 of the pack&#39;s strongest wolves.
+Goodnight :(
+[[Feline v. Canine]] </tw-passagedata><tw-passagedata pid="59" name="Stand your ground and defend your new territory." tags="" position="1317,558" size="100,100">It&#39;s just you against 5 of the pack&#39;s strongest wolves.
 [[You sustain severe injuries.]]</tw-passagedata><tw-passagedata pid="60" name="Run Away!" tags="" position="1500,539" size="100,100">This loner life isn&#39;t really working out. You decide to find a pack to join.
 [[Pack]] </tw-passagedata><tw-passagedata pid="61" name="You sustain severe injuries." tags="" position="1521,668" size="100,100">[[GAME OVER]]
-You were not successful in defending yourself, and certainly not you territory. You succumb to your injuries. :(</tw-passagedata><tw-passagedata pid="62" name="GAME OVER" tags="" position="1533,1119" size="100,100">Tsk, tsk, tsk. Try again!
-[[Feline v. Canine]] </tw-passagedata><tw-passagedata pid="63" name="Turn the other wolves against the alpha male." tags="" position="992,1203" size="100,100">[[Challenge the alpha male.]] 
+You were not successful in defending yourself, and certainly not you territory. You succumb to your injuries. :(</tw-passagedata><tw-passagedata pid="62" name="GAME OVER" tags="" position="1425,1099" size="100,100">Tsk, tsk, tsk. Try again!
+[[Try Again-&gt;Feline v. Canine]] </tw-passagedata><tw-passagedata pid="63" name="Turn the other wolves against the alpha male." tags="" position="992,1203" size="100,100">[[Challenge the alpha male.]] 
 </tw-passagedata><tw-passagedata pid="64" name="Save the kill for yourself." tags="" position="1122,1304" size="100,100">The other wolves alert the alpha male to your selfish behavior. Your kill is confiscated, and you are kicked out of the pack. 
 [[GAME OVER]] </tw-passagedata><tw-passagedata pid="65" name="Invite a few of the others, share the kill." tags="" position="1264,1173" size="100,100">[[Turn the other wolves against the alpha male.]] 
 </tw-passagedata><tw-passagedata pid="66" name="Go for the jugular!" tags="" position="1079,1523" size="100,100">Always go for the jugular! You have him right where you want him. 
@@ -210,17 +220,26 @@ You were not successful in defending yourself, and certainly not you territory. 
 [[Window sill]] </tw-passagedata><tw-passagedata pid="74" name="Drink from the sink" tags="" position="2631,731" size="100,100">Yum. Lets go get the crumbs now.. 
 [[Push around the crumbs]] </tw-passagedata><tw-passagedata pid="75" name="Eat dinner" tags="" position="1669,1049" size="100,100">Dinner was delcious... Time to go to sleep with a full belly :)
 
-Goodnight :)</tw-passagedata><tw-passagedata pid="76" name="Bedroom" tags="" position="194,687" size="100,100">(set: $bedroom is true)[(if: $feathers is true)[
-Mom sees what you did to the pillows immediately and she is not ammused... she is furious and dad puts you in the crate for being a bad dog :(
-[[Crate]] 
-]
+Goodnight :)
+
+[[Feline v. Canine]] </tw-passagedata><tw-passagedata pid="76" name="Bedroom" tags="" position="194,687" size="100,100">(set: $bedroom to true)
+(if: $livingroom is true)[Now its Dinner Time!
+[[Dinner Time!]] ]
 (else:)[
 Mom and dad change out of their work clothes and go back to the living room for some relaxation before dinner!
 [[Living Room]]
-]]
-(if: $livingroom is true)[Now its Dinner Time!
-[[Dinner Time!]] 
-]</tw-passagedata><tw-passagedata pid="77" name="Living Room" tags="" position="273,523" size="100,100">(if: $remote is true)[Dad goes to put the game on and looks for the remote.. He sees what you did! Dad starts yelling at you and mom isn&#39;t happy once she has seen what you did. You are put in your crate for time out :(
+]
+(if: $feathers is true)[
+Mom sees what you did to the pillows immediately and she is not ammused... she is furious and dad puts you in the crate for being a bad dog :(
+[[Crate]] 
+]
+
+</tw-passagedata><tw-passagedata pid="77" name="Living Room" tags="" position="273,523" size="100,100">(set: $livingroom to true)
+(if: $momanddadcomehome is true)[Now its Dinner Time!
+[[Dinner Time!]]]
+(if: $bedroom is true)[Now its Dinner Time!
+[[Dinner Time!]]]
+(if: $remote is true)[Dad goes to put the game on and looks for the remote.. He sees what you did! Dad starts yelling at you and mom isn&#39;t happy once she has seen what you did. You are put in your crate for time out :(
 [[Crate]]
 ]
 (else:)[
@@ -229,18 +248,19 @@ Mom and dad sit on the couch and you lay at their feet. This is nice :)
 After hanging in the living room for a little while mom and dad get up to go to the bedroom to change out of their work clothes befor dinner.
 [[Bedroom]] 
 ]
-(if: $momanddadcomehome is true)(if: $bedroom is true)[Now its Dinner Time!
-[[Dinner Time!]]
-]
+
 </tw-passagedata><tw-passagedata pid="78" name="Crate" tags="" position="428,493" size="100,100">(set: $crate to true)[This is sad :( mom and dad came and opened the crate and gave you some food but they are still mad.. after dinner they let you out and its time for bed and you follow them to the bedroom again for the night. 
 [[Night time]]]</tw-passagedata><tw-passagedata pid="79" name="Dinner Time!" tags="" position="424,694" size="100,100">Yum!! Dinner is delicious mom and dad are the best! They took you out and played with you for a little while but now its time for bed! You follow mom and dad to the bedroom for night time 
 [[Night time]] </tw-passagedata><tw-passagedata pid="80" name="Night time" tags="" position="582,682" size="100,100">(if: $crate is true)[ Mom and dad said you have to stay on the floor tonight *sigh*
 [[Sleep on the floor]]]
 (else:)[Mom and dad let you pick if you want to sleep on the floor or on the bed!!! 
 [[Sleep on the floor]]
-[[Sleep on the bed]]]</tw-passagedata><tw-passagedata pid="81" name="Sleep on the floor" tags="" position="509,862" size="100,100">(if: $crate is true)[Humph.. you should try to be a better pup tomorrow..]
+[[Sleep on the bed]]]</tw-passagedata><tw-passagedata pid="81" name="Sleep on the floor" tags="" position="509,862" size="100,100">(if: $crate is true)[Humph.. you should try to be a better pup tomorrow..
+[[Feline v. Canine]] ]
 (else:)[You are pretty comfy but you miss mom and dad after a while.
-[[Sleep on the bed]] ]</tw-passagedata><tw-passagedata pid="82" name="Sleep on the bed" tags="" position="726,837" size="100,100">Mom and dad are the best.You should be a good dog again tomorrow!</tw-passagedata><tw-passagedata pid="83" name="Go Hunting" tags="" position="2047,13" size="100,100">There&#39;s a great deal of diversity on the African Savannah, and you have a lot of prey to choose from. You narrow it down to 2: 
+[[Sleep on the bed]]  
+]</tw-passagedata><tw-passagedata pid="82" name="Sleep on the bed" tags="" position="686,877" size="100,100">Mom and dad are the best.You should be a good dog again tomorrow!
+[[Feline v. Canine]]</tw-passagedata><tw-passagedata pid="83" name="Go Hunting" tags="" position="2047,13" size="100,100">There&#39;s a great deal of diversity on the African Savannah, and you have a lot of prey to choose from. You narrow it down to 2: 
 [[Water Buffalo]]
 [[Zebra]]</tw-passagedata><tw-passagedata pid="84" name="Steal an ostrich egg" tags="" position="1807,0" size="100,100">This was just enough to hold you over, but eventually you&#39;ll need to go on a real hunt. Stealing is for scavengers, and lions don&#39;t scavenge.
 [[Go Hunting]] </tw-passagedata><tw-passagedata pid="85" name="Water Buffalo" tags="" position="2182,157" size="100,100">Taking down a water buffalo requires the strength of a few lions. You decide to quit while your ahead and only sustain minor injuries. 
