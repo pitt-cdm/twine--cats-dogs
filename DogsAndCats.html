@@ -11,7 +11,8 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="DogsAndCats" startnode="1" creator="Twine" creator-version="2.2.1" ifid="ACE1CEFF-6988-4D9E-99F1-158431581B00" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="DogsAndCats" startnode="1" creator="Twine" creator-version="2.3.0" ifid="ACE1CEFF-6988-4D9E-99F1-158431581B00" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
 
 
 
@@ -25,6 +26,7 @@
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -77,17 +79,20 @@ Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
 Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
 &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="8" name="Roam Free..." tags="" position="1525,0" size="100,100">Survey the area, avoid other predators for now. Since you can&#39;t rely on the support of others, your survival depends on your persistence. 
 [[Go Hunting]]
-[[Steal an ostrich egg]]</tw-passagedata><tw-passagedata pid="9" name="Window sill" tags="" position="1838,366" size="100,100">(else:)[You&#39;re enjoying sitting on your windowsill staring and watching the cars pass by. Do you take a nap or continue watching?
-[[Take a nap on the windowsill]]
-[[Continue Watching]]]
+[[Steal an ostrich egg]]</tw-passagedata><tw-passagedata pid="9" name="Window sill" tags="" position="1752,317" size="100,100">
 (if: $cookies is true)[You have decided that you are going to watch the cars pass by until dinner time
 [[Continue Watching]] ]
 (if: $revenge is true)[You have decided that you are going to watch the cars pass by until dinner time
-[[Continue Watching]] ]</tw-passagedata><tw-passagedata pid="10" name="Kitchen" tags="" position="2419,468" size="100,100">(else:)[You plan to wait for some food but it seems like it is taking quite a while.. Take a nap while you wait or investigate the counters?]
-[[Take a nap on the kitchen floor]]
-[[Investigate the kitchen]]
+[[Continue Watching]] ]
+(else:)[You&#39;re enjoying sitting on your windowsill staring and watching the cars pass by. Do you take a nap or continue watching?
+[[Take a nap on the windowsill]]
+[[Continue Watching]]]</tw-passagedata><tw-passagedata pid="10" name="Kitchen" tags="" position="2419,468" size="100,100">(set: $kitchen to true)
 (if: $toy is true)[Hiding out from dad was a good idea! You want to wait for some food but it seems like it will take a while. Take a nap while you wait or investigate the counters?]
-(if: $claws is true)[Hiding out from dad was a good idea! You want to wait for some food but it seems like it will take a while. Take a nap while you wait or investigate the counters?]</tw-passagedata><tw-passagedata pid="11" name="On the Couch" tags="" position="2041,620" size="100,100">The couch is the comfiest you could imagine yourself. Do you find yourself falling asleep or ready to get up and investigate?
+(if: $claws is true)[Hiding out from dad was a good idea! You want to wait for some food but it seems like it will take a while. Take a nap while you wait or investigate the counters?]
+(else:)[You plan to wait for some food but it seems like it is taking quite a while.. Take a nap while you wait or investigate the counters?]
+
+[[Take a nap on the kitchen floor]]
+[[Investigate the kitchen]]</tw-passagedata><tw-passagedata pid="11" name="On the Couch" tags="" position="2021,632" size="100,100">The couch is the comfiest you could imagine yourself. Do you find yourself falling asleep or ready to get up and investigate?
 [[Falling asleep on the couch]]
 [[Investigate the Livingroom]]</tw-passagedata><tw-passagedata pid="12" name="Bed" tags="" position="40,24" size="100,100">This is pretty comfortable with all these pillows.. Should you take a nap in them or have a fun time playing with them?
 [[Take a nap on the bed]]
@@ -100,8 +105,7 @@ Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
 [[Steal a carcaas from a grizzly bear]]
 [[Wait for the bear to leave, then eat the scraps]]</tw-passagedata><tw-passagedata pid="16" name="Pack" tags="" position="838,443" size="100,100">You enjoy team work and family life. When living as part of a pack, you develop bonds with your fellows wolves. THese bonds are essential for survival and come into play when hunting and raising pups. As a new member, you must join the hunting party and secure the pack&#39;s next meal. What will you bring back?
 [[Caribou]]
-[[Small Rabbit]]</tw-passagedata><tw-passagedata pid="17" name="Continue Watching" tags="" position="1688,509" size="100,100">(set: $watch to true) 
-
+[[Small Rabbit]]</tw-passagedata><tw-passagedata pid="17" name="Continue Watching" tags="" position="1688,509" size="100,100">
 (if: $cookies is true)[You heard the can open... RUN TO THE KITCHEN
 [[Dinner Time]]]
 (if: $revenge is true)[You heard the can open... RUN TO THE KITCHEN
@@ -114,40 +118,43 @@ Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
 You had your fun, there are feathers everywhere. Definitley time for a nap! Or do you want some water first?
 [[Find some water]]
 [[Take a nap on the bed]]]</tw-passagedata><tw-passagedata pid="19" name="Find the tv Remote" tags="" position="496,309" size="100,100">(set: $remote to true) [You found the tv remote alright.. It was a ton of fun to chew but you hid the evidence under your belly anyway. You are exhausted now! ]
-[[Take a nap on the couch]]</tw-passagedata><tw-passagedata pid="20" name="Lay in the sun" tags="" position="713,286" size="100,100">(if: $sun to true)[That was a really nice nap, but it got really warm.
+[[Take a nap on the couch]]</tw-passagedata><tw-passagedata pid="20" name="Lay in the sun" tags="" position="713,286" size="100,100">(set: $sun to true)[That was a really nice nap, but it got really warm.
 ]
 
 [[Find some water]]</tw-passagedata><tw-passagedata pid="21" name="Find some water" tags="" position="628,479" size="100,100">(if: $sun is true) [You were really thirsty and drank the entire bowl from the kitchen. You are exhausted now do you want to nap in the living room or bedroom? 
 [[Take a nap on the bed]]
 [[Take a nap on the couch]]]
+(else:)[You took your time walking to the kitchen for a drink, then drank about half of the bowl. Do you want to nap in the living room or bedroom?
+[[Take a nap on the bed]] 
+[[Take a nap on the couch]] ]
 (if: $feathers is true) [You drank about half of your water bowl but you are definetely exhausted, do you want to nap in the living room or bedroom? 
 [[Take a nap on the bed]]
 [[Take a nap on the couch]]]
-(else:)[You took your time walking to the kitchen for a drink, then drank about half of the bowl. Do you want to nap in the living room or bedroom?
-[[Take a nap on the bed]] 
-[[Take a nap on the couch]] ]</tw-passagedata><tw-passagedata pid="22" name="Take a nap on the couch" tags="" position="350,376" size="100,100">You are woken up to mom and dad walking through the door, do you want to keep sleeping or run to say hi?
+</tw-passagedata><tw-passagedata pid="22" name="Take a nap on the couch" tags="" position="350,376" size="100,100">(set: $couch to true)[You are woken up to mom and dad walking through the door, do you want to keep sleeping or run to say hi?
 [[Continue napping on the couch]]
-[[Run to say hello]]</tw-passagedata><tw-passagedata pid="23" name="Falling asleep on the couch" tags="" position="1749,894" size="100,100">You wiggle your way into the comfiest spot on the couch and if anyone even thinks of disturbing you they better look out... About an hour later, you hear the can of your dinner opening up, do you get up slowly and stretch or run to the kitchen for dinner?
+[[Run to say hello]]]</tw-passagedata><tw-passagedata pid="23" name="Falling asleep on the couch" tags="" position="1774,936" size="100,100">You wiggle your way into the comfiest spot on the couch and if anyone even thinks of disturbing you they better look out... About an hour later, you hear the can of your dinner opening up, do you get up slowly and stretch or run to the kitchen for dinner?
 [[Stretch]]
-[[Dinner Time]] </tw-passagedata><tw-passagedata pid="24" name="Investigate the Livingroom" tags="" position="2039,774" size="100,100">You walk into the living room and dad is there. Do you engage him or ignore him entirely?
+[[Dinner Time]] </tw-passagedata><tw-passagedata pid="24" name="Investigate the Livingroom" tags="" position="2027,750" size="100,100">You walk into the living room and dad is there. Do you engage him or ignore him entirely?
 [[Engage]]
 [[Ignore]]</tw-passagedata><tw-passagedata pid="25" name="Take a nap on the kitchen floor" tags="" position="2691,456" size="100,100">Mom warns you that laying there is a bad idea.. Someone might step on you, but what does mom know! Stay on the floor or investigate the counters?
 [[Stay on the floor]]
 [[Investigate the kitchen]] </tw-passagedata><tw-passagedata pid="26" name="Investigate the kitchen" tags="" position="2556,581" size="100,100">There are some crumbs on the floor you could push around.. or do you want to drink from the sink?
 [[Push around the crumbs]]
-[[Drink from the sink]]</tw-passagedata><tw-passagedata pid="27" name="Take a nap on the windowsill" tags="" position="1837,562" size="100,100">(if: $watch is true) [ You are taking a long long nap. You slept so hard you fell off the windowsill but no worries you landed on all fours. Where do you go next?
+[[Drink from the sink]]</tw-passagedata><tw-passagedata pid="27" name="Take a nap on the windowsill" tags="" position="1837,562" size="100,100">
+(if: $kitchen is true)[You slept so hard you fell off the windowsill but no worries you landed on all fours. Head to the Couch
+[[On the Couch]]]
 
-]
-(else:)[You slept so hard you fell off the windowsill but no worries you landed on all fours. Where do you go next?]
+(else:)[You slept so hard you fell off the windowsill but no worries you landed on all fours. Where do you go next?
 [[On the Couch]]
-[[Kitchen]]</tw-passagedata><tw-passagedata pid="28" name="Continue napping on the couch" tags="" position="698,626" size="100,100">(if: $remote is true)[Mom and dad come in the room and dad tries to turn on the tv and looks for the remote. He sees what happened and wakes you up immediately. You get put in the crate right away :( 
+[[Kitchen]]]
+</tw-passagedata><tw-passagedata pid="28" name="Continue napping on the couch" tags="" position="698,626" size="100,100">(if: $remote is true)[Mom and dad come in the room and dad tries to turn on the tv and looks for the remote. He sees what happened and wakes you up immediately. You get put in the crate right away :( 
 [[Crate]] ]
-(else:)[Mom and dad come in and say hi. You love them so much! You follow them to the bedroom.
+(if: $couch is true)[Mom and dad come in and say hi. You love them so much! You follow them to the bedroom.
 [[Bedroom]] ]</tw-passagedata><tw-passagedata pid="29" name="Run to say hello" tags="" position="213,363" size="100,100">Mom and dad are so excited to see you! You welcome them with kisses! Do you walk with them the to bedroom or lead them to the living room couch?
 [[Bedroom]] 
-[[Living Room]] </tw-passagedata><tw-passagedata pid="30" name="Take a nap on the bed" tags="" position="195,138" size="100,100">You are woken up to mom and dad walking through the front door, do you want to keep sleeping or run to say hi?
+[[Living Room]] </tw-passagedata><tw-passagedata pid="30" name="Take a nap on the bed" tags="" position="195,138" size="100,100">(set: $bed to true)[You are woken up to mom and dad walking through the front door, do you want to keep sleeping or run to say hi?
 [[Keep napping on the bed]]
-[[Run to say hello]]</tw-passagedata><tw-passagedata pid="31" name="Keep napping on the bed" tags="" position="86,306" size="100,100">(if: $feathers is true)[
+[[Run to say hello]]]</tw-passagedata><tw-passagedata pid="31" name="Keep napping on the bed" tags="" position="86,306" size="100,100">(if: $feathers is true)[
 Ahhhh, soft feathers. So hard to get up!
 [[Mom and Dad come in the room]]
 
@@ -155,7 +162,7 @@ Ahhhh, soft feathers. So hard to get up!
 Good thing this pillow is still here.
 [[Mom and Dad come in the room]]
 ]
-</tw-passagedata><tw-passagedata pid="32" name="Mom and Dad come in the room" tags="" position="56,448" size="100,100">(set: $momanddadcomehome to true)
+</tw-passagedata><tw-passagedata pid="32" name="Mom and Dad come in the room" tags="" position="56,448" size="100,100">
 (if: $feathers is true)[Mom and dad see what you did right away and they are angry.. you get put in the crate right away.. :(
 [[Crate]] ]
 (else:)[You wait with mom and dad until they go to the living room.
@@ -205,18 +212,20 @@ or
 [[Play with a toy]]]</tw-passagedata><tw-passagedata pid="49" name="Ignore" tags="" position="2180,783" size="100,100">Ignoring the human is the best option, they are annoying anyway. Should you take a nap or sit in front of the tv?
 [[Nap]]
 [[Sit in front of TV]]
-</tw-passagedata><tw-passagedata pid="50" name="Nap" tags="" position="2148,912" size="100,100">(set: $nap to true)[Naps are always the best.. ]
+</tw-passagedata><tw-passagedata pid="50" name="Nap" tags="" position="2172,925" size="100,100">(set: $nap to true)[Naps are always the best.. ]
 [[Engage]]</tw-passagedata><tw-passagedata pid="51" name="Play with a toy" tags="" position="1862,1112" size="100,100">(set: $toy to true)[Dad has the feather toy, get your claws out to play!]
-[[Get the claws ready]]</tw-passagedata><tw-passagedata pid="52" name="Sit in front of TV" tags="" position="2160,551" size="100,100">Dad does not like this choice.. He has gotten up and is coming towards you. Should you run to the kitchen or get your claws ready?
+[[Get the claws ready]]</tw-passagedata><tw-passagedata pid="52" name="Sit in front of TV" tags="" position="2184,581" size="100,100">(if: $kitchen is true)[Dad does not like this choice.. Get your claws ready!
+[[Get the claws ready]]]
+(else:)[Dad does not like this choice.. He has gotten up and is coming towards you. Should you run to the kitchen or get your claws ready?
 [[Kitchen]]
-[[Get the claws ready]]</tw-passagedata><tw-passagedata pid="53" name="Get the claws ready" tags="" position="2357,995" size="100,100">(If: $toy is true)[You have a lot of fun with dad chasing around the feather but it gets boring. You move on. Do you go to the kitchen or the windowsill?
+[[Get the claws ready]]]</tw-passagedata><tw-passagedata pid="53" name="Get the claws ready" tags="" position="2357,995" size="100,100">(If: $toy is true)[You have a lot of fun with dad chasing around the feather but it gets boring. You move on. Do you go to the kitchen or the windowsill?
 [[Kitchen]]
 [[Window sill]]]
 (else:)[Dad is not happy with you whatso ever. You have scratched him and he is chasing you. Do you go to the windowsill or the Kitchen?
 [[Window sill]]
 [[Kitchen]]]</tw-passagedata><tw-passagedata pid="54" name="Stay on the floor" tags="" position="2900,451" size="100,100">(Set: $cookies to true)[A little while later mom drops an entire tray of cookies while stepping on my tail.. No one is happy in this situation, should you take revenge or just go to the window sill?
 [[Take Revenge]]
-[[Window sill]] </tw-passagedata><tw-passagedata pid="55" name="Take Revenge" tags="" position="2693,573" size="100,100">(set: $revenge to true)[You attack moms ankles! She looks furious... go to the window sill!
+[[Window sill]] </tw-passagedata><tw-passagedata pid="55" name="Take Revenge" tags="" position="2745,583" size="100,100">(set: $revenge to true)[You attack moms ankles! She looks furious... go to the window sill!
 [[Window sill]] 
 ]</tw-passagedata><tw-passagedata pid="56" name="Dinner Time" tags="" position="1625,774" size="100,100">You are so excited for this dinner dad is getting for you! Here it comes!
 (if: $revenge is true)[Wait - mom stopped dad, dead in his tracks. She told him what you did in the kitchen to her ankle... and she said NO DINNER! UGH Life is so hard..
@@ -259,6 +268,8 @@ Goodnight :)
 [[Feline v. Canine]] </tw-passagedata><tw-passagedata pid="76" name="Bedroom" tags="" position="194,687" size="100,100">(set: $bedroom to true)
 (if: $livingroom is true)[Now its Dinner Time!
 [[Dinner Time!]] ]
+(if: $couch is true)[Now its Dinner Time!
+[[Dinner Time!]] ]
 (else:)[
 Mom and dad change out of their work clothes and go back to the living room for some relaxation before dinner!
 [[Living Room]]
@@ -269,13 +280,9 @@ Mom sees what you did to the pillows immediately and she is not ammused... she i
 ]
 
 </tw-passagedata><tw-passagedata pid="77" name="Living Room" tags="" position="273,523" size="100,100">(set: $livingroom to true)
-(if: $momanddadcomehome is true)[Now its Dinner Time!
+
+(if: $bed is true)[Now its Dinner Time!
 [[Dinner Time!]]]
-(if: $bedroom is true)[Now its Dinner Time!
-[[Dinner Time!]]]
-(if: $remote is true)[Dad goes to put the game on and looks for the remote.. He sees what you did! Dad starts yelling at you and mom isn&#39;t happy once she has seen what you did. You are put in your crate for time out :(
-[[Crate]]
-]
 (else:)[
 Mom and dad sit on the couch and you lay at their feet. This is nice :)
 
@@ -283,7 +290,10 @@ After hanging in the living room for a little while mom and dad get up to go to 
 [[Bedroom]] 
 ]
 
-</tw-passagedata><tw-passagedata pid="78" name="Crate" tags="" position="428,493" size="100,100">(set: $crate to true)[This is sad :( mom and dad came and opened the crate and gave you some food but they are still mad.. after dinner they let you out and its time for bed and you follow them to the bedroom again for the night. 
+
+(if: $remote is true)[Dad goes to put the game on and looks for the remote.. He sees what you did! Dad starts yelling at you and mom isn&#39;t happy once she has seen what you did. You are put in your crate for time out :(
+[[Crate]]
+]</tw-passagedata><tw-passagedata pid="78" name="Crate" tags="" position="428,493" size="100,100">(set: $crate to true)[This is sad :( mom and dad came and opened the crate and gave you some food but they are still mad.. after dinner they let you out and its time for bed and you follow them to the bedroom again for the night. 
 [[Night time]]]</tw-passagedata><tw-passagedata pid="79" name="Dinner Time!" tags="" position="424,694" size="100,100">Yum!! Dinner is delicious mom and dad are the best! They took you out and played with you for a little while but now its time for bed! You follow mom and dad to the bedroom for night time 
 [[Night time]] </tw-passagedata><tw-passagedata pid="80" name="Night time" tags="" position="582,682" size="100,100">(if: $crate is true)[ Mom and dad said you have to stay on the floor tonight *sigh*
 [[Sleep on the floor]]]
